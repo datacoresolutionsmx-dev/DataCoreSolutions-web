@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { NAV_LINKS } from '../constants';
-import { Logo } from './Icons';
+import logoImg from '../assets/logo_letrasBlancas_2-sinfondo.png';
 
 const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -26,15 +26,17 @@ const Header: React.FC = () => {
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled || location.pathname !== '/' ? 'bg-black/80 backdrop-blur-md shadow-lg border-b border-gray-800' : 'bg-transparent'
         }`}
     >
-      <div className="container mx-auto px-6 h-20 flex items-center justify-between">
-        {/* Logo Section */}
-        <Link to="/" className="flex items-center space-x-3 cursor-pointer h-16">
-          <Logo className="w-8 h-8 text-primary" />
-          <span className="text-white text-xl font-bold tracking-tight">| Data Core Solutions</span>
+      <div className="container mx-auto px-6 h-20 flex items-center justify-between md:grid md:grid-cols-[1fr_auto_1fr]">
+        <Link to="/" className="flex items-center cursor-pointer relative h-20 w-[200px] md:w-[280px] md:justify-self-start">
+          <img
+            src={logoImg}
+            alt="Data Core Solutions"
+            className="absolute top-1/2 left-0 -translate-y-1/2 h-32 md:h-52 w-auto max-w-none object-contain"
+          />
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-8">
+        <nav className="hidden md:flex items-center space-x-8 md:justify-self-center">
           {NAV_LINKS.map((link) => (
             <Link
               key={link.name}
@@ -48,7 +50,7 @@ const Header: React.FC = () => {
         </nav>
 
         {/* Desktop CTA */}
-        <div className="hidden md:block">
+        <div className="hidden md:flex md:justify-self-end">
           <button className="bg-gradient-to-r from-primary to-blue-600 hover:from-blue-600 hover:to-primary text-white font-bold py-2 px-6 rounded-lg transition-all duration-300 transform hover:scale-[1.02] shadow-lg hover:shadow-xl hover:shadow-primary/30">
             Tienda
           </button>

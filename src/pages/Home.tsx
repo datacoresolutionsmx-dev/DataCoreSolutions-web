@@ -2,7 +2,7 @@ import React from 'react';
 import Hero from '../components/Hero';
 import ValueProposition from '../components/ValueProposition';
 import FeaturedSolutions from '../components/FeaturedSolutions';
-import Testimonials from '../components/Testimonials';
+import WorkMethodology from '../components/WorkMethodology';
 import CallToAction from '../components/CallToAction';
 
 const Home: React.FC = () => {
@@ -11,7 +11,7 @@ const Home: React.FC = () => {
             <Hero />
             <ValueProposition />
             <FeaturedSolutions />
-            <Testimonials />
+            <WorkMethodology />
             <CallToAction />
         </>
     );

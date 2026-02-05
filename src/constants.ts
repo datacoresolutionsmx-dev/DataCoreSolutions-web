@@ -23,21 +23,3 @@ export const SOLUTIONS_DATA = [
     icon: 'shield'
   }
 ];
-
-export const TESTIMONIALS_DATA = [
-  {
-    quote: "La implementación de Data Core Solutions transformó nuestra capacidad de procesamiento de datos en tiempo real.",
-    author: "Elena R.",
-    role: "CTO, FutureFinance"
-  },
-  {
-    quote: "Su enfoque en seguridad nos dio la tranquilidad necesaria para migrar nuestras operaciones críticas a la nube.",
-    author: "Marcos D.",
-    role: "Director de TI, HealthSystems"
-  },
-  {
-    quote: "Hardware robusto y soporte inigualable. Data Core Solutions es el socio estratégico que necesitábamos.",
-    author: "Sarah L.",
-    role: "VP de Ingeniería, AutoMotive X"
-  }
-];

@@ -47,8 +47,8 @@ const Contact: React.FC = () => {
                                 <Mail className="w-8 h-8 text-primary group-hover:scale-110 transition-transform" />
                             </div>
                             <h3 className="text-xl font-bold text-gray-900 mb-3">Correo Electrónico</h3>
-                            <p className="text-gray-600 mb-1">info@techorp.com</p>
-                            <p className="text-gray-600">soporte@techorp.com</p>
+                            <p className="text-gray-600 mb-1">datacoresolutionsmx@gmail.com</p>
+                            <p className="text-gray-600">jperez@datacoremx.com</p>
                         </div>
 
                         <div className="group bg-gray-50 border border-gray-100 p-8 rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
@@ -56,8 +56,7 @@ const Contact: React.FC = () => {
                                 <Phone className="w-8 h-8 text-primary group-hover:scale-110 transition-transform" />
                             </div>
                             <h3 className="text-xl font-bold text-gray-900 mb-3">Teléfono</h3>
-                            <p className="text-gray-600 mb-1">+52 (55) 1234-5678</p>
-                            <p className="text-gray-600">+52 (55) 8765-4321</p>
+                            <p className="text-gray-600 mb-1">442229 0904</p>
                         </div>
 
                         <div className="group bg-gray-50 border border-gray-100 p-8 rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
@@ -65,8 +64,7 @@ const Contact: React.FC = () => {
                                 <MapPin className="w-8 h-8 text-primary group-hover:scale-110 transition-transform" />
                             </div>
                             <h3 className="text-xl font-bold text-gray-900 mb-3">Ubicación</h3>
-                            <p className="text-gray-600 mb-1">Av. Reforma 222, Piso 15</p>
-                            <p className="text-gray-600">Ciudad de México, CDMX</p>
+                            <p className="text-gray-600 mb-1">BOULEVARD BERNARDO QUINTANA 7001 TORRE 1 815 COL. CENTRO SUR QUERÉTARO QRO. C.P. 76090.</p>
                         </div>
                     </div>
                 </div>

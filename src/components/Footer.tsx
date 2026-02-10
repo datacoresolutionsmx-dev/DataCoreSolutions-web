@@ -1,5 +1,6 @@
-import React from 'react';
+import { Link } from 'react-router-dom';
 import { Logo } from './Icons';
+import { NAV_LINKS } from '../constants';
 
 const Footer: React.FC = () => {
   return (
@@ -21,10 +22,10 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4 text-gray-200">Soluciones</h4>
             <ul className="space-y-2 text-sm text-gray-500">
-              <li><a href="#" className="hover:text-primary transition-colors">Compute & Servers</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Almacenamiento de Datos</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Inteligencia Artificial</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Edge Computing</a></li>
+              <li><Link to="/servicios" className="hover:text-primary transition-colors">Compute & Servers</Link></li>
+              <li><Link to="/servicios" className="hover:text-primary transition-colors">Almacenamiento de Datos</Link></li>
+              <li><Link to="/servicios" className="hover:text-primary transition-colors">Inteligencia Artificial</Link></li>
+              <li><Link to="/servicios" className="hover:text-primary transition-colors">Edge Computing</Link></li>
             </ul>
           </div>
 
@@ -32,10 +33,13 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4 text-gray-200">Empresa</h4>
             <ul className="space-y-2 text-sm text-gray-500">
-              <li><a href="#" className="hover:text-primary transition-colors">Sobre Nosotros</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Carreras</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Inversores</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Noticias</a></li>
+              {NAV_LINKS.map((link) => (
+                <li key={link.name}>
+                  <Link to={link.href} className="hover:text-primary transition-colors">
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -43,21 +47,16 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4 text-gray-200">Contacto</h4>
             <ul className="space-y-2 text-sm text-gray-500">
-              <li>Ventas: +1 (555) 123-4567</li>
-              <li>Soporte: support@datacoresolutions.com</li>
-              <li>Calle Tecnológica 101, Ciudad Futura</li>
+              <li>Telefono: 442229 0904</li>
+              <li>Correo: datacoresolutionsmx@gmail.com</li>
+              <li>BOULEVARD BERNARDO QUINTANA 7001 TORRE 1 815 COL. CENTRO SUR QUERÉTARO QRO. C.P. 76090.</li>
             </ul>
-            <div className="flex space-x-4 mt-4">
-              {/* Social Placeholders */}
-              <div className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors cursor-pointer text-xs">LN</div>
-              <div className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors cursor-pointer text-xs">TW</div>
-              <div className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors cursor-pointer text-xs">YT</div>
-            </div>
+
           </div>
         </div>
 
         <div className="border-t border-gray-900 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-600">
-          <p>&copy; 2025 Data Core Solutions. Todos los derechos reservados.</p>
+          <p>&copy; 2026 Data Core Solutions. Todos los derechos reservados.</p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <a href="#" className="hover:text-gray-400">Privacidad</a>
             <a href="#" className="hover:text-gray-400">Términos</a>
